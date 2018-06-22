@@ -11,7 +11,10 @@
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+# keep idea folder to see what causes intelliJ confusion for compiling the project
+!/.idea
+/.idea/workspace.xml
+.idea/libraries
 *.iws
 *.iml
 *.ipr
@@ -24,7 +27,5 @@
 /nbdist/
 /.nb-gradle/
 /stale_outputs_checked
-/spike.iml
 /.mvn/wrapper/
 .mvn/
-stale_outputs_checked
