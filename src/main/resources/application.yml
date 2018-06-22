@@ -1,0 +1,18 @@
+logging:
+  level:
+    root: info
+    org.springframework.core.env.StandardEnvironment: error
+    org.springframework: error
+    org.apache: error
+    com.netflix.config.sources: error
+    com.existme.spike: trace
+  file: /tmp/spring.log
+  pattern:
+#     Original pattern 
+#    console: '%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%xwEx %-40.40c{1.} : %m%n%ex'
+#     See http://log4jtester.com/ for more info 
+#    Shorter version with some ascii marker  uses NerdFonts symbols
+    console: '%clr{%d{HH:mm:ss}}{faint} %clr{%5p} %clr{}{red} %clr{░░▒▒▓▓██ }{faint} %clr{%l}{cyan}{faint} %clr{:}{cyan} %clr{ ██▓▓▒▒░░}{faint}%n %m%n%ex%n'
+spring:
+  application:
+    name: spike
