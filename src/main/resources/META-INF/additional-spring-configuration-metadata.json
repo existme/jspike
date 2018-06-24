@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "spike.message",
+      "type": "java.lang.String",
+      "description": "Description for spike.message."
+    }
+  ]
+}

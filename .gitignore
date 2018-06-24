@@ -14,6 +14,7 @@
 # keep idea folder to see what causes intelliJ confusion for compiling the project
 !/.idea
 /.idea/workspace.xml
+/.idea/emacs.xml
 .idea/libraries
 *.iws
 *.iml
@@ -29,3 +30,7 @@
 /stale_outputs_checked
 /.mvn/wrapper/
 .mvn/
+/.idea/httpRequests/*.html
+/.idea/httpRequests/*.json
+/.idea/httpRequests/*log.http
+/src/main/resources/private.yml

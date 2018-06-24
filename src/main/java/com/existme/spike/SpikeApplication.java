@@ -33,7 +33,7 @@ public class SpikeApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        LOGGER.info("Spring Application has started with {}# of args", args.length);
+        LOGGER.info("Spring Application has started with {}# of args", String.join(",",args));
     }
 
     public void aTestMethod() {

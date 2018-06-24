@@ -17,4 +17,5 @@ public interface JsonClient {
 
     @RequestMapping(path = "/posts", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     PostEntity createPost(PostEntity entityObject);
+
 }

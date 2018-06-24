@@ -1,3 +1,8 @@
+# See the following link for more info:
+#   https://docs.spring.io/spring-boot/docs/1.4.x/reference/html/common-application-properties.html
+server:
+  port: 8000
+
 logging:
   level:
     root: info
@@ -16,3 +21,27 @@ logging:
 spring:
   application:
     name: spike
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+      oidcClient:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+#        errorDecoder: com.example.SimpleErrorDecoder
+#        retryer: com.example.SimpleRetryer
+#        requestInterceptors:
+#          - com.example.FooRequestInterceptor
+#          - com.example.BarRequestInterceptor
+#        decode404: false
+#        encoder: com.example.SimpleEncoder
+#        decoder: com.example.SimpleDecoder
+#        contract: com.example.SimpleContract
+
+spike:
+  message: "Hello from spike project"

@@ -18,6 +18,7 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class JsonClientTest {
     Logger LOGGER = LogManager.getLogger(SpikeApplicationTests.class.getName());
+
     @Autowired
     private JsonClient jsonClient;
 
