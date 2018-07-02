@@ -4,6 +4,11 @@
       "name": "spike.message",
       "type": "java.lang.String",
       "description": "Description for spike.message."
+    },
+    {
+      "name": "oidcClient.ribbon.listOfServers",
+      "type": "java.lang.String",
+      "description": "Description for oidcClient.ribbon.listOfServers."
     }
   ]
 }

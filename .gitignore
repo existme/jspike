@@ -20,13 +20,6 @@
 *.iml
 *.ipr
 
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
 /stale_outputs_checked
 /.mvn/wrapper/
 .mvn/
@@ -34,3 +27,4 @@
 /.idea/httpRequests/*.json
 /.idea/httpRequests/*log.http
 /src/main/resources/private.yml
+/src/main/resources/private.properties

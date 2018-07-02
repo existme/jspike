@@ -3,7 +3,8 @@ package com.existme.spike.Feign.Oidc;
 import org.springframework.cloud.netflix.feign.*;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient(value = "oidcClient", url = "https://samples.auth0.com/", configuration = OidcConfiguration.class)
+//@FeignClient(value = "oidcClient", configuration = OidcConfiguration.class)
+@FeignClient(value = "oidcClient", url="${feign.client.config.oidc.root}")
 public interface OidcClient {
 
     @RequestMapping(path = "/.well-known/openid-configuration", method = RequestMethod.GET)

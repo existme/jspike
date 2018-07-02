@@ -5,12 +5,15 @@ server:
 
 logging:
   level:
-    root: info
+    root: trace
     org.springframework.core.env.StandardEnvironment: error
     org.springframework: error
     org.apache: error
     com.netflix.config.sources: error
+    org.hibernate: error
     com.existme.spike: trace
+    org.springframework.util: error
+    org.springframework.boot: error
   file: /tmp/spring.log
   pattern:
 #     Original pattern 
@@ -25,6 +28,10 @@ spring:
 feign:
   client:
     config:
+#      pinboard:
+#        root: https://api.pinboard.in/v1
+      oidc:
+        root: https://samples.auth0.com/
       default:
         connectTimeout: 5000
         readTimeout: 5000
@@ -45,3 +52,5 @@ feign:
 
 spike:
   message: "Hello from spike project"
+flyway:
+  url:

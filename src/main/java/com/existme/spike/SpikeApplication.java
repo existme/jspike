@@ -6,10 +6,20 @@ import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.cloud.netflix.feign.*;
 import org.springframework.context.*;
+import org.springframework.context.annotation.*;
 
-
+/**
+ * Override public configuration in `public.properties` with private configuration in private.properties
+ * **note**: Beware that if the property is also listed in `application.yml` that will precede
+ */
 @SpringBootApplication
 @EnableFeignClients
+@PropertySources({
+        @PropertySource(value = "classpath:public.properties", ignoreResourceNotFound = false),
+        @PropertySource(value = "classpath:private.properties", ignoreResourceNotFound = false),
+}
+)
+@Configuration
 public class SpikeApplication implements CommandLineRunner {
     private Logger LOGGER = LogManager.getLogger(SpikeApplication.class.getName());
 
@@ -33,7 +43,7 @@ public class SpikeApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        LOGGER.info("Spring Application has started with {}# of args", String.join(",",args));
+        LOGGER.info("Spring Application has started with {}# of args", String.join(",", args));
     }
 
     public void aTestMethod() {
